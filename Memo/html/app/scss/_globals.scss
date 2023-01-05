@@ -1,0 +1,29 @@
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *:after {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: $darkGrayishCyan; 
+    font-size: 1rem;
+    font-weight: $heavyWeight;
+    color:$veryDarkCyan;
+}
+
+h1, h2, h3 {
+    margin: 0px;
+    font-weight: $normalWeight;
+    line-height: 1.15;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    color:$veryDarkCyan;
+}

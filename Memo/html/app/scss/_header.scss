@@ -1,0 +1,23 @@
+.header {
+    padding: 1rem 10rem;
+    background-color: $darkerGrayishCyan;
+    &__links {
+        display: inline-block;
+        a {
+            transition: color 200ms ease-in-out;
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+    }
+    span {
+        float: right;
+        margin-right: 5rem;
+        font-weight: $heavyWeight;
+        font-size: 1.25rem;
+        color: black;
+    }
+}
