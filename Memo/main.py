@@ -3,6 +3,7 @@ import tkinter.ttk as ttk
 from tkinter.constants import *
 from functools import partial
 import os
+import collections
 
 allBooks = {}
 visBooks = {}
@@ -24,7 +25,7 @@ with open('data.txt','r') as f:
 
 def changePage(forward):
     global page
-    if forward and len(allBooks.keys())>=page*10:
+    if forward and len(allBooks.keys())>page*10:
         page +=1
         if var1.get()==1:
             createFrame1Content2()
@@ -76,7 +77,7 @@ def createFrame1Content():
 
     button = tk.Button(frame1_nav, text='<', bg='gray', fg='white', command=lambda: changePage(False))
     button.grid(row=1, column=1)
-    label = tk.Label(frame1_nav, font=('Arial', 12), text=page, bg=('gray'), fg='cyan')
+    label = tk.Label(frame1_nav, font=('Arial', 10), text=page, bg=('gray'), fg='cyan')
     label.grid(row=1, column=2)
     button = tk.Button(frame1_nav, text='>', bg='gray', fg='white', command=lambda: changePage(True))
     button.grid(row=1, column=3)
@@ -112,7 +113,7 @@ def createFrame1Content2(): # for deleting
 
     button = tk.Button(frame1_nav, text='<', bg='gray', fg='white', command=lambda: changePage(False))
     button.grid(row=1, column=1)
-    label = tk.Label(frame1_nav, font=('Arial', 12), text=page, bg=('gray'), fg='cyan')
+    label = tk.Label(frame1_nav, font=('Arial', 10), text=page, bg=('gray'), fg='cyan')
     label.grid(row=1, column=2)
     button = tk.Button(frame1_nav, text='>', bg='gray', fg='white', command=lambda: changePage(True))
     button.grid(row=1, column=3)
@@ -153,15 +154,17 @@ def createFrame1Content3(): # for updating
 
     button = tk.Button(frame1_nav, text='<', bg='gray', fg='white', command=lambda: changePage(False))
     button.grid(row=1, column=1)
-    label = tk.Label(frame1_nav, font=('Arial', 12), text=page, bg=('gray'), fg='cyan')
+    label = tk.Label(frame1_nav, font=('Arial', 10), text=page, bg=('gray'), fg='cyan')
     label.grid(row=1, column=2)
     button = tk.Button(frame1_nav, text='>', bg='gray', fg='white', command=lambda: changePage(True))
     button.grid(row=1, column=3)
-
+    
 def addBook(event=None): 
+    global allBooks
     if book_input!="":
         allBooks[book_input.get()] = None
         book_input.set("")
+    allBooks = collections.OrderedDict(sorted(allBooks.items()))
 
     if var1.get()==1:
         createFrame1Content2()

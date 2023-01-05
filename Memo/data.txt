@@ -1,18 +1,27 @@
+Apocalypse Redux
+Bastion
 Chainsawman
 -url-
 https://www.chainsaw-man-manga.online/manga/chainsaw-man-chapter-112/
+Cradle
+Dawn of the Void
+Defiance of the Fall
+Iron Prince
+Magical Girl Gunslinger
+-url-
+https://www.royalroad.com/fiction/48402/magical-girl-gunslinger
+Mistborn
 One Punch Man
 -url-
 https://mangarockteam.com/manga/onepunch-man/chapter-176/
 Salvos
 -url-
 https://www.royalroad.com/fiction/37438/hellprinces-salvos-a-monster-evolution-litrpg/chapter/1076288/480-regroup
-Bastion
-Defiance of the Fall
-Iron Prince
+Speedrun the Multiverse
+Stormlight Archives
 The Beginning After the End
 -url-
 https://www.webnovelpub.com/novel/the-beginning-after-the-end-548/chapter-408-05122045
-Magical Girl Gunslinger
+Worm
 -url-
-https://www.royalroad.com/fiction/48402/magical-girl-gunslinger
+https://parahumans.wordpress.com/2011/06/28/gestation-1-6/
