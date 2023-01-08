@@ -57,5 +57,56 @@ a, a:visited, a:hover {
 }
 .hero__title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.hero__list {
+  list-style-type: none;
+}
+.hero__list__elem {
+  display: inline-block;
+  transition: color 200ms ease-in-out;
+  font-size: 1.5rem;
+}
+.hero__list__elem:hover {
+  cursor: pointer;
+  color: hsl(185deg, 41%, 84%);
+}
+.hero__list__elem__label {
+  margin-right: 0.5rem;
+}
+.hero__list__elem__text {
+  margin-right: 0.5rem;
+}
+.hero__list__elem__update {
+  font-weight: 700;
+  background-color: hsl(185deg, 41%, 84%);
+  border: none;
+  padding: 2px 6px;
+  border-radius: 5px;
+  transition: background-color 200ms ease-in-out;
+}
+.hero__list__elem__update:hover {
+  cursor: pointer;
+  background-color: hsl(136deg, 65%, 51%);
+}
+.hero__list__elem__container {
+  display: inline-block;
+  float: right;
+}
+.hero__list__remove {
+  margin-right: 1rem;
+  font-weight: 700;
+  background-color: hsl(185deg, 41%, 84%);
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 200ms ease-in-out;
+}
+.hero__list__remove:hover {
+  cursor: pointer;
+  background-color: hsl(136deg, 65%, 51%);
+}
+.hero__list__container:not(:last-child) {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,61 @@
     padding: 1rem 4rem;
     &__title {
         text-align: center;
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    &__list {
+        list-style-type: none;
+        &__elem {
+            display: inline-block;
+            transition: color 200ms ease-in-out;
+            font-size: 1.5rem;
+            &:hover {
+                cursor: pointer;
+                color: $lightGrayishCyan
+            }
+            &__label {
+                margin-right: 0.5rem;
+            }
+            &__text {
+                margin-right: 0.5rem;
+            }
+            &__update {
+                font-weight: $heavyWeight;
+                background-color: $lightGrayishCyan;
+                border: none;
+                padding: 2px 6px;
+                border-radius: 5px;
+                transition: background-color 200ms ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    background-color: $limeGreen;
+                }
+            }
+            &__container {
+                display: inline-block;
+                float:right;
+            }
+        }
+
+        &__remove {
+            margin-right: 1rem;
+            font-weight: $heavyWeight;
+            background-color: $lightGrayishCyan;
+            padding: 2px 6px;
+            border-radius: 10px;
+            border: none;
+            transition: background-color 200ms ease-in-out;
+            &:hover {
+                cursor: pointer;
+                background-color: $limeGreen;
+            }
+        }
+
+        &__container {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
     }
 }
