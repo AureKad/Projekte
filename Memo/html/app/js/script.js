@@ -1,10 +1,11 @@
 const books = document.getElementsByClassName('hero__list')[0];
 
 function addBook(book, url) {
-    let entry = document.createElement('li');
     let container = document.createElement('div');
+    let entry = document.createElement('li');
     let close = document.createElement('button');
-    let form = document.createElement('div')
+    let container_name = document.createElement('div')
+    let container_update = document.createElement('div')
     let label = document.createElement('label');
     let input_url = document.createElement('input');
     let input_button = document.createElement('button');
@@ -22,15 +23,15 @@ function addBook(book, url) {
         let index = getIndexOfBook(data, book, url);
         data.splice(index, 1);
     
-        "localStorage.setItem('books', JSON.stringify(data));"
+        localStorage.setItem('books', JSON.stringify(data));
         // Delete HTML
-        this.parentElement.remove();
+        this.parentElement.parentElement.remove();
        }
     });
 
     input_button.addEventListener('click', function(e) {
         let new_url = input_url.value
-        if (new_url!="") {
+        if (new_url != "" || (new_url == "" && url != "")) {
             let data = JSON.parse(localStorage.getItem('books'));
             index = getIndexOfBook(data, book, url);
             data.splice(index, 1, [book, new_url]);
@@ -45,7 +46,8 @@ function addBook(book, url) {
     input_button.textContent = 'Update';
     input_button.className = 'hero__list__elem__update';
     input_url.className = 'hero__list__elem__text';
-    form.className = 'hero__list__elem__container';
+    container_update.className = 'hero__list__elem__container';
+    container_name.className = 'hero__list__namecontainer'
 
     entry.appendChild(document.createTextNode(book));
     if (url != "") {
@@ -53,12 +55,13 @@ function addBook(book, url) {
         input_url.value = url
     }
 
-    container.appendChild(close);
-    container.appendChild(entry);
-    form.appendChild(label);
-    form.appendChild(input_url);
-    form.appendChild(input_button);
-    container.appendChild(form)
+    container_name.appendChild(close);
+    container_name.appendChild(entry);
+    container.appendChild(container_name)
+    container_update.appendChild(label);
+    container_update.appendChild(input_url);
+    container_update.appendChild(input_button);
+    container.appendChild(container_update)
     books.appendChild(container);
 }
 
@@ -74,6 +77,35 @@ function getIndexOfBook(data, book, url) {
     }
 }
 
+function addBook_help() {
+    input = document.getElementById('addbook_input')
+    let data = JSON.parse(localStorage.getItem('books'));
+    if (input.value!="" && !data.map(d => d[0]).map(book => book.toLowerCase()).includes(input.value.toLowerCase())) {
+        addBook(input.value,'');
+        data.splice(data.length, 0, [input.value, ""]);
+        localStorage.setItem('books', JSON.stringify(data));
+        input.value = "";
+    }
+}
+
+function sort_books() {
+    let data = JSON.parse(localStorage.getItem('books'));
+    data.sort((a, b) => a[0].localeCompare(b[0]));
+    localStorage.setItem('books', JSON.stringify(data));
+    delete_list()
+    create_list()
+}
+
+function delete_list() {
+    books.innerHTML = ''
+}
+
+function create_list() {
+    const data = JSON.parse(localStorage.getItem('books'));
+    data.forEach(element => {
+        addBook(...element)
+    });
+}
 
 
 

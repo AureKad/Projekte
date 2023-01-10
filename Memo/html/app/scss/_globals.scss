@@ -27,3 +27,14 @@ a, a:visited, a:hover {
     text-decoration: none;
     color:$veryDarkCyan;
 }
+
+button {
+    font-weight: $heavyWeight;
+    background-color: $lightGrayishCyan;
+    border: none;
+    transition: background-color 200ms ease-in-out;
+    &:hover {
+        cursor: pointer;
+        background-color: $limeGreen;
+    }
+}

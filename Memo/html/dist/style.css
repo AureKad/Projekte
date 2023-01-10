@@ -28,6 +28,17 @@ a, a:visited, a:hover {
   color: hsl(183deg, 100%, 15%);
 }
 
+button {
+  font-weight: 700;
+  background-color: hsl(185deg, 41%, 84%);
+  border: none;
+  transition: background-color 200ms ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(136deg, 65%, 51%);
+}
+
 .header {
   padding: 1rem 10rem;
   background-color: hsl(186deg, 14%, 43%);
@@ -54,6 +65,7 @@ a, a:visited, a:hover {
 
 .hero {
   padding: 1rem 4rem;
+  text-align: center;
 }
 .hero__title {
   text-align: center;
@@ -61,7 +73,9 @@ a, a:visited, a:hover {
   margin-bottom: 2rem;
 }
 .hero__list {
+  display: inline-block;
   list-style-type: none;
+  text-align: left;
 }
 .hero__list__elem {
   display: inline-block;
@@ -79,34 +93,43 @@ a, a:visited, a:hover {
   margin-right: 0.5rem;
 }
 .hero__list__elem__update {
-  font-weight: 700;
-  background-color: hsl(185deg, 41%, 84%);
-  border: none;
   padding: 2px 6px;
   border-radius: 5px;
-  transition: background-color 200ms ease-in-out;
-}
-.hero__list__elem__update:hover {
-  cursor: pointer;
-  background-color: hsl(136deg, 65%, 51%);
 }
 .hero__list__elem__container {
   display: inline-block;
+  margin-left: 3rem;
   float: right;
 }
 .hero__list__remove {
   margin-right: 1rem;
-  font-weight: 700;
-  background-color: hsl(185deg, 41%, 84%);
   padding: 2px 6px;
   border-radius: 10px;
-  border: none;
-  transition: background-color 200ms ease-in-out;
-}
-.hero__list__remove:hover {
-  cursor: pointer;
-  background-color: hsl(136deg, 65%, 51%);
 }
 .hero__list__container:not(:last-child) {
   margin-bottom: 1rem;
+}
+.hero__list__namecontainer {
+  display: inline-block;
+}
+.hero__addbook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.hero__addbook__input {
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  margin-right: 8px;
+}
+.hero__addbook__button {
+  padding: 4px 12px;
+  border-radius: 5px;
+}
+.hero__sortbooks {
+  margin-top: 1rem;
+  padding: 4px 12px;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

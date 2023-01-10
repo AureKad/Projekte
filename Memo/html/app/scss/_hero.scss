@@ -1,12 +1,15 @@
 .hero {
     padding: 1rem 4rem;
+    text-align: center;
     &__title {
         text-align: center;
         font-size: 3rem;
         margin-bottom: 2rem;
     }
     &__list {
+        display: inline-block;
         list-style-type: none;
+        text-align: left;
         &__elem {
             display: inline-block;
             transition: color 200ms ease-in-out;
@@ -22,35 +25,20 @@
                 margin-right: 0.5rem;
             }
             &__update {
-                font-weight: $heavyWeight;
-                background-color: $lightGrayishCyan;
-                border: none;
                 padding: 2px 6px;
                 border-radius: 5px;
-                transition: background-color 200ms ease-in-out;
-                &:hover {
-                    cursor: pointer;
-                    background-color: $limeGreen;
-                }
             }
             &__container {
                 display: inline-block;
+                margin-left: 3rem;
                 float:right;
             }
         }
 
         &__remove {
             margin-right: 1rem;
-            font-weight: $heavyWeight;
-            background-color: $lightGrayishCyan;
             padding: 2px 6px;
             border-radius: 10px;
-            border: none;
-            transition: background-color 200ms ease-in-out;
-            &:hover {
-                cursor: pointer;
-                background-color: $limeGreen;
-            }
         }
 
         &__container {
@@ -58,5 +46,31 @@
                 margin-bottom: 1rem;
             }
         }
+        &__namecontainer {
+            display: inline-block;
+        }
+    }
+
+    &__addbook {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        &__input {
+            border-radius: 5px;
+            font-size: 1rem;
+            border: none;
+            margin-right: 8px;
+        }
+
+        &__button {
+            padding: 4px 12px;
+            border-radius: 5px;
+        }
+    }
+    &__sortbooks {
+        margin-top: 1rem;
+        padding: 4px 12px;
+        border-radius: 5px;
     }
 }
