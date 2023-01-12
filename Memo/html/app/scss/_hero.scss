@@ -6,6 +6,35 @@
         font-size: 3rem;
         margin-bottom: 2rem;
     }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1rem;
+        &__input {
+            border-radius: 5px;
+            font-size: 1rem;
+            border: none;
+        }
+
+        &__search {
+            padding: 4px 12px;
+            border-radius: 5px;
+        }
+
+        &__reset {
+            padding: 4px 12px;
+            border-radius: 5px;
+        }
+    }
+    &__sortbooks {
+        margin-top: 1rem;
+        padding: 4px 12px;
+        border-radius: 5px;
+    }
+
     &__list {
         display: inline-block;
         list-style-type: none;
@@ -28,26 +57,37 @@
                 padding: 2px 6px;
                 border-radius: 5px;
             }
-            &__container {
+            &__updatecontainer {
                 display: inline-block;
                 margin-left: 3rem;
                 float:right;
             }
+            &__textcontainer {
+                max-width: 30vw;
+                display: inline-block;
+            }
+            &__desc {
+                width: 100%;
+                display: block;
+                margin-top: 0.5rem;
+                background-color: $darkGrayishCyan;
+                border: none;
+                font-weight: $heavyWeight;
+                color: $almostVeryDarkCyan;
+                word-break:break-word;
+            }
+            &__remove {
+                margin-right: 1rem;
+                padding: 2px 6px;
+                border-radius: 10px;
+            }
         }
 
-        &__remove {
-            margin-right: 1rem;
-            padding: 2px 6px;
-            border-radius: 10px;
-        }
 
         &__container {
             &:not(:last-child) {
                 margin-bottom: 1rem;
             }
-        }
-        &__namecontainer {
-            display: inline-block;
         }
     }
 

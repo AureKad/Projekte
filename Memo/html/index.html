@@ -21,6 +21,11 @@
     </header>
     <section class="hero">
         <h1 class="hero__title">Bücher</h1>
+        <div class="hero__search">
+            <input oninput="search()" id="search_input" class="hero__search__input" type="text">
+            <button onclick="search()" class="hero__search__search">Search</button>
+            <button onclick="reset()" class="hero__search__reset">Reset</button>
+        </div>
         <ul class="hero__list">
             
         </ul>
