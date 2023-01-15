@@ -24,9 +24,15 @@
     transition: opacity 300ms ease-in-out;
 }
 
+.list__container {
+    display: inline-block;
+}
+
+
 .hero {
     padding: 1rem 4rem;
     text-align: center;
+
     &__title {
         text-align: center;
         font-size: 3rem;
@@ -60,11 +66,28 @@
         padding: 4px 12px;
         border-radius: 5px;
     }
-
+    .title__bm {
+        margin-top: 1rem;
+    }
+    &__bmlist {
+        border: solid;
+        border-color: aqua;
+        &:empty {
+            display: none;
+        }
+    }
+    &__favlist {
+        border: solid;
+        border-color: yellow;
+        &:empty {
+            display: none;
+        }
+    }
     &__list {
-        display: inline-block;
+        display: block;
         list-style-type: none;
         text-align: left;
+        padding: 1rem;
         &__elem {
             display: inline-block;
             transition: color 200ms ease-in-out;

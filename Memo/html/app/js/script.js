@@ -1,5 +1,10 @@
-const books = document.getElementsByClassName('hero__list')[0];
+const bookmarked_books = document.getElementsByClassName('hero__bmlist')[0];
+const favorite_books = document.getElementsByClassName('hero__favlist')[0];
+const books = document.getElementsByClassName('hero__list')[2];
 let site = window.location.url
+
+const title_bm = document.getElementsByClassName('title__bm')[0];
+const title_fav = document.getElementsByClassName('title__fav')[0];
 
 function addBook(book, url, desc, site, bm, fav) {
     let container = document.createElement('div');
@@ -28,7 +33,8 @@ function addBook(book, url, desc, site, bm, fav) {
     container_text.appendChild(textarea_desc)
     container.appendChild(container_text)
     container.appendChild(container_update)
-    books.appendChild(container);
+
+    bm ? bookmarked_books.appendChild(container) : (fav ? favorite_books.appendChild(container) : books.appendChild(container));
 }
 
 function addBook_bookmark(book, url, desc, site, bm, fav) {
@@ -209,6 +215,8 @@ function sort_books() {
 
 function delete_list() {
     books.innerHTML = ''
+    bookmarked_books.innerHTML = ''
+    favorite_books.innerHTML = ''
 }
 
 function create_list() {
@@ -233,6 +241,7 @@ function create_list() {
             addBook(...element)
         }
     });
+    manageTitles()
 }
 
 function search() {
@@ -251,6 +260,7 @@ function search() {
                 addBook(...element)
             }
         })
+        manageTitles()
     } else {
         delete_list()
         create_list()
@@ -264,6 +274,23 @@ function reset() {
     input.value = ""
     input = document.getElementById('addbook_input');
     input.value = ""
+}
+
+function manageTitles() {
+    console.log(bookmarked_books.childNodes.length)
+    if (bookmarked_books.childNodes.length==0) {
+        title_fav.style.marginTop = '1rem';
+        title_bm.style.display = 'none';
+    } else {
+        title_fav.style.marginTop = '0rem';
+        title_bm.style.display = 'block';
+    }
+
+    if (favorite_books.childNodes.length==0) {
+        title_fav.style.display = 'none';
+    } else {
+        title_fav.style.display = 'block';
+    }
 }
 
 
