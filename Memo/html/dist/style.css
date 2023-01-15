@@ -63,6 +63,32 @@ button:hover {
   color: black;
 }
 
+.fav-star {
+  color: yellow;
+  font-size: 1.5rem;
+}
+
+.bookmark {
+  color: aqua;
+  font-size: 1.5rem;
+}
+
+.icon-wrap {
+  margin-top: 3px;
+  margin-right: 1rem;
+  float: left;
+  position: relative;
+  display: inline;
+}
+
+.fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
 .hero {
   padding: 1rem 4rem;
   text-align: center;
