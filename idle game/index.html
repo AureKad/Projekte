@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="stylesheet" href="app/css/style.css">
+  <title>Best Idle Game EuWest</title>
+
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">MOST BEST IDLE GAME</h1>
+    </header>
+
+    <section class="content">
+        <div class="content__ngu">
+            <div class="content__ngu__main">
+                <span id="ngu" class="content__ngu__main__number">0</span>
+                <span class="content__ngu__main__stuff">Cool Stuff</span>
+            </div>
+            <button onClick="manual()"class="btnClick content__ngu__button">Click Me</button>
+        </div>
+        <div class="content__buy">
+            <div class="content__buy__1st">
+                <div class="buy" >
+                    <div class="content__buy__1st__info">
+                        <img src="app/img/dab.png" alt="a Person dabbing">
+                        <span class="content__buy__1st__info__name">Cool Guy</span>
+                        <span id="coolGuy__prod" class="content__buy__1st__info__prod">0/s</span>
+                    </div>
+                    <div class="content__buy__1st__buying">
+                        <button onclick="buy(0)" class="btnBuy">Buy</button>
+                        <span id="coolGuy__cost">For 10 Cool Stuff</span>
+                    </div>
+                    <div class="content__buy__1st__amount">
+                        <span id="coolGuy__amount">You have: 0 Cool Guys</span>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="upgrade">
+                        <span class="up" id="c0u0" onclick="upgrade(0,0, this.id)">Cool Upgrade: 50</span>
+                        <span class="up" id="c0u1" onclick="upgrade(0,1, this.id)">Cooler Upgrade: 100</span>
+                        <span class="up" id="c0u2" onclick="upgrade(0,2, this.id)">COOLESTEST UPGRADE: 500</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content__buy__1st">
+                <div class="buy" >
+                    <div class="content__buy__1st__info">
+                        <img src="app/img/farmer.png" style="margin-right: 5px;" alt="a Person farming">
+                        <span class="content__buy__1st__info__name">Farm Boi</span>
+                        <span id="farmer__prod" class="content__buy__1st__info__prod">0/s</span>
+                    </div>
+                    <div class="content__buy__1st__buying">
+                        <button onclick="buy(1)" class="btnBuy">Buy</button>
+                        <span id="farmer__cost">For 100 Cool Stuff</span>
+                    </div>
+                    <div class="content__buy__1st__amount">
+                        <span id="farmer__amount">You have: 0 Farm Boi(s)</span>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="upgrade">
+                        <span class="up" id="c1u0" onclick="upgrade(1,0, this.id)">Pesticide Upgrade: 200</span>
+                        <span class="up" id="c1u1" onclick="upgrade(1,1, this.id)">Bananacide Upgrade: 1000</span>
+                        <span class="up" id="c1u2" onclick="upgrade(1,2, this.id)">Genocide Upgrade: 5000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content__buy__1st">
+                <div class="buy" >
+                    <div class="content__buy__1st__info">
+                        <img src="app/img/clerk.png" style="margin-right: 5px;" alt="a Person farming">
+                        <span class="content__buy__1st__info__name">Sales Man</span>
+                        <span id="salesman__prod" class="content__buy__1st__info__prod">0/s</span>
+                    </div>
+                    <div class="content__buy__1st__buying">
+                        <button onclick="buy(2)" class="btnBuy">Buy</button>
+                        <span id="salesman__cost">For 1000 Cool Stuff</span>
+                    </div>
+                    <div class="content__buy__1st__amount">
+                        <span id="salesman__amount">You have: 0 Sales Men</span>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="upgrade">
+                        <span class="up" id="c2u0" onclick="upgrade(2,0, this.id)">Motivation: 5000</span>
+                        <span class="up" id="c2u1" onclick="upgrade(2,1, this.id)">Psychology Degree: 20000</span>
+                        <span class="up" id="c2u2" onclick="upgrade(2,2, this.id)">Big Brain Upgrade: 50000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="game">  
+        <h2>Be a Cool Guy</h2>
+        <span class="game__undertext">and save the World</span>
+        <div class="container">
+            <canvas id="spacegame"></canvas>
+            <div class="game__upgrades">
+                <h2>Upgrades</h2>
+                <div class="upgrade">
+                    <span class="upgrade__info">Speed for 10000</span>  
+                    <div class="upgrade__amount">
+                        <div class="background"></div>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                        <span class="upgrade__amount__stroke"></span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div>
+            <button class="btnGame">Start Game</button>
+        </div>
+    </section>
+  <script src="app/js/script.js "></script>
+</body>
+</html>

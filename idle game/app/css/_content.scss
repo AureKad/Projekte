@@ -1,0 +1,105 @@
+.content {
+    margin-top: 10%;
+    overflow: hidden;
+    &__ngu {
+        float: left;
+        width:50%;
+        text-align: center;
+        &__main {
+            display: flex;
+            gap:10px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            margin-top: 6px;
+            &__number {
+                display:inline-block;
+            }
+            &__stuff {
+                color: lightskyblue;
+                display:inline-block;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__buy {
+        float:right;
+        width:50%;
+        text-align: center;;
+        &__1st {
+            display: flex;
+            justify-content: space-evenly;
+            .buy {
+                width: 15rem;
+                .content__buy__1st__info {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                    img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+    
+                    &__name {
+                        margin-right: 10px;
+                        color: lightskyblue;
+                        display:inline-block;
+                        font-size: 1.5rem;
+                    }
+                }
+                .content__buy__1st__buying {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap:10px;
+                }   
+                .content__buy__1st__amount {
+                    margin-top: 0.5rem;
+                }
+            
+            }
+            .scroll {
+                overflow-y: auto;
+                .upgrade {
+                    min-height: 100%;
+                    height: 0;
+                    overflow-x: hidden;
+                    width:20rem;
+                    .up {
+                        display:block;
+                        table-layout: fixed;
+                        padding: 1rem;
+                        background-color: rgb(41, 41, 41);
+                        border-radius: 10px;
+                        &:not(:last-child) {
+                            margin-bottom: 1px;
+                        }
+                        &:hover {
+                            background-color: gray;
+                            transition: background-color 150ms ease-in-out;
+                            cursor: pointer;
+                        }
+                    }
+    
+                    .down {
+                        display:block;
+                        padding: 1rem;
+                        background-color: gray;
+                        border-radius: 10px;
+                        text-decoration: line-through;
+                        &:not(:last-child) {
+                            margin-bottom: 1px;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                } 
+            }
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
     <link rel="stylesheet" href="dist/style.css">
-    <title>Bücher</title>
+    <title>Termine</title>
 </head>
 <body>
     <header class="header">
@@ -22,14 +22,14 @@
         <span>Unga Bunga</span>
     </header>
     <section class="hero">
-        <h1 class="hero__title">Animes</h1>
+        <h1 class="hero__title">Termine</h1> 
         <div class="hero__search">
             <input oninput="search()" id="search_input" class="hero__search__input" type="text">
             <button onclick="search()" class="hero__search__search">Search</button>
             <button onclick="reset()" class="hero__search__reset">Reset</button>
         </div>
         <div class="list__container">
-            <h2 class="title__bm">Watching</h2>
+            <h2 class="title__bm">Reading</h2>
             <ul class="hero__list hero__bmlist"></ul>
             <h2 class="title__fav">Favorites</h2>
             <ul class="hero__list hero__favlist"></ul>
@@ -37,12 +37,12 @@
         </div>
         <div class="hero__addbook">
             <input id="addbook_input" class="hero__addbook__input" type="text">
-            <button onclick="addBook_help()" class="hero__addbook__button">Add Anime</button>
+            <button onclick="addBook_help()" class="hero__addbook__button">Add to Calender</button>
         </div>
         <button onclick = "sort_books()" class="hero__button">Sort</button>
         <button onclick = "save_file()" class="hero__button">Save to txt</button>
     </section>
-
-    <script src="app/js/script.js"></script>
+    <script type="module" src="app/js/libraries/FileSaver.js"></script>
+    <script  src="app/js/script.js"></script>
 </body>
 </html>

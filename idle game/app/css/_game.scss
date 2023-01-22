@@ -1,0 +1,93 @@
+.game {
+    position:relative;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 20vh;
+
+    h2 {
+        margin: 0;
+        font-size: 2rem;
+        color: lightblue;
+    }
+
+    &__undertext {
+        display: inline-block;
+        width: 100%;
+        color:lightblue;
+        font-size: 1.25rem;
+        margin-bottom:1rem;
+    }
+
+
+    .container {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        #spacegame {
+            background-color: gray;
+        }
+        .game__upgrades {
+            position:absolute;
+            top:0%;
+            left:137.5%;
+            width: 30vw;
+            transform: translate(-50%,-50%);
+            h2 {
+                color:rgb(116, 192, 116)
+            }
+            .upgrade {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+                width: 100%;
+                overflow: hidden;
+                &__info {
+                    float:left;
+                    color: lightgray;
+                    width: 50%;
+                    text-align: center;
+                    margin-left: 5%;
+                    padding: 1rem;
+                    &:not(:last-child) {
+                        margin-bottom: 1px;
+                    }
+                    &:hover {
+                        background-color: green;
+                        transition: background-color 150ms ease-in-out;
+                        cursor: pointer;
+                    }
+                }
+                &__amount {
+                    display: flex;
+                    float:right;
+                    margin-right: 5%;
+                    width: 50%;
+                    &__stroke {
+                        display: inline-block;
+                        width: 6px;
+                        background-color: white;
+                        margin-left: 3%;
+                        margin-top: 3%;
+                        height: 80%;
+                        &:first-child {
+                            margin-left: 10%;
+                        }
+                    }
+                    .background {
+                        position: absolute;
+                        width: 45%;
+                        height: 50%;
+                        background-color: gray;
+                        z-index: -1;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .btnGame {
+        margin-top: 1rem;
+    }
+
+}
